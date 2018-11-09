@@ -39,7 +39,7 @@ CREATE TABLE parents
 , address_state         VARCHAR(2)    NOT NULL
 , address_zip           INTEGER       NOT NULL);
 
-
+/*
 DROP TABLE IF EXISTS student_staff_relations CASCADE;
 CREATE TABLE student_staff_relations
 ( stu_sta_relation_id   SERIAL        PRIMARY KEY
@@ -52,7 +52,7 @@ CREATE TABLE student_parent_relations
 ( stu_par_relation_id   SERIAL        PRIMARY KEY
 , student_id            INTEGER       REFERENCES student(student_id)
 , parents_id            INTEGER       REFERENCES parents(parents_id));
-
+*/
 
 DROP TABLE IF EXISTS incidents CASCADE;
 CREATE TABLE incidents
