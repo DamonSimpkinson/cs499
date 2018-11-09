@@ -78,6 +78,7 @@ INSERT INTO student
 , grade
 , homeroom_teacher)
 VALUES --1
+
 ( 'Johnny'
 , 'NMN'
 , 'Lingo'
@@ -87,7 +88,7 @@ VALUES --1
 , 'ID'
 , 83712
 , 3
-, 'Largo')
+, 'Largo');/*
 ,
 ( 'Jane'
 , 'NMN'
@@ -331,8 +332,7 @@ VALUES --1
 , 'ID'
 , 83712
 , 3
-, 'Largo');
-
+, 'Largo');*/
 
 
 INSERT INTO staff
