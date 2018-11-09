@@ -39,7 +39,7 @@ CREATE TABLE parents
 , address_state         VARCHAR(2)    NOT NULL
 , address_zip           INTEGER       NOT NULL);
 
-/*
+
 DROP TABLE IF EXISTS student_staff_relations CASCADE;
 CREATE TABLE student_staff_relations
 ( stu_sta_relation_id   SERIAL        PRIMARY KEY
@@ -64,7 +64,7 @@ CREATE TABLE incidents
 , staff_reporting       INTEGER       REFERENCES staff(staff_id)
 , location              VARCHAR(20)   NOT NULL
 , description           VARCHAR(200)  NOT NULL);
-*/
+
 
 INSERT INTO student
 ( first_name
@@ -540,7 +540,7 @@ VALUES
 , 'ID'
 , 83712);
 
-/*
+
 INSERT INTO student_staff_relations
 ( student_id
 , staff_id)
@@ -569,8 +569,8 @@ VALUES
 (22, 4),
 (23, 4),
 (24, 3);
-*/
-/*
+
+
 INSERT INTO student_parent_relations
 ( student_id
 , parents_id)
@@ -599,4 +599,3 @@ VALUES
 (22, 15),
 (23, 15),
 (24, 16);
-*/
