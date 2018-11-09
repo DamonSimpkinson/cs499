@@ -224,7 +224,6 @@ VALUES
 ( 'Finnick'
 , 'NMN'
 , 'Odair'
-, 'NMN'
 , 'NA'
 , '1649 Fisher Circle'
 , 'Boise'
