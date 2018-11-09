@@ -77,8 +77,7 @@ INSERT INTO student
 , address_zip
 , grade
 , homeroom_teacher)
-VALUES --1
-
+VALUES
 ( 'Johnny'
 , 'NMN'
 , 'Lingo'
@@ -121,8 +120,8 @@ VALUES --1
 , 'ID'
 , 83277,
 , 2
-, 'Hoover'); /*
-, --5
+, 'Hoover')
+,
 ( 'Rodney'
 , 'NMN'
 , 'Flanders'
@@ -132,8 +131,7 @@ VALUES --1
 , 'ID'
 , 83277
 , 4
-, 'Krabapple'
-)
+, 'Krabapple')
 ,
 ( 'Todd'
 , 'NMN'
@@ -155,7 +153,7 @@ VALUES --1
 , 'ID'
 , 83227
 , 4
-, 'Krabapple'); /*
+, 'Krabapple')
 ,
 ( 'Milhouse'
 , 'Mussolini'
@@ -178,7 +176,7 @@ VALUES --1
 , 83227
 , 3
 , 'Largo')
-, --10
+,
 ( 'Peeta'
 , 'NMN'
 , 'Mellark'
@@ -233,7 +231,7 @@ VALUES --1
 , 83712
 , 4
 , 'Krabapple')
-, -- 15
+,
 ( 'Annie'
 , 'NMN'
 , 'Cresta'
@@ -283,7 +281,7 @@ VALUES --1
 , 83712
 , 2
 , 'Hoover')
-, --20
+,
 ( 'Ronald'
 , 'NMN'
 , 'Weasley'
@@ -332,7 +330,7 @@ VALUES --1
 , 'ID'
 , 83712
 , 3
-, 'Largo');*/
+, 'Largo');
 
 
 INSERT INTO staff
@@ -561,7 +559,8 @@ VALUES
 (22, 4),
 (23, 4),
 (24, 3);
-
+*/
+/*
 INSERT INTO student_parent_relations
 ( student_id
 , parents_id)
