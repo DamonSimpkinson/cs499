@@ -52,7 +52,7 @@ CREATE TABLE student_parent_relations
 ( stu_par_relation_id   SERIAL        PRIMARY KEY
 , student_id            INTEGER       REFERENCES student(student_id)
 , parents_id            INTEGER       REFERENCES parents(parents_id));
-*/
+
 
 DROP TABLE IF EXISTS incidents CASCADE;
 CREATE TABLE incidents
@@ -64,7 +64,7 @@ CREATE TABLE incidents
 , staff_reporting       INTEGER       REFERENCES staff(staff_id)
 , location              VARCHAR(20)   NOT NULL
 , description           VARCHAR(200)  NOT NULL);
-
+*/
 
 INSERT INTO student
 ( first_name
