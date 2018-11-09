@@ -11,7 +11,7 @@ CREATE TABLE student
 , address_street        VARCHAR(30)   NOT NULL
 , address_city          VARCHAR(20)   NOT NULL
 , address_state         VARCHAR(2)    NOT NULL
-, address_zip           INTEGER(5)    NOT NULL
+, address_zip           INTEGER       NOT NULL
 , grade                 INTEGER(2)    NOT NULL
 , homeroom_teacher      VARCHAR(20)   NOT NULL);
 
