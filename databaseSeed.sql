@@ -99,7 +99,7 @@ VALUES --1
 , 'ID'
 , 83712
 , 2
-, 'Hoover'); /*
+, 'Hoover')
 ,
 ( 'Bartholomew'
 , 'JoJo'
@@ -121,7 +121,7 @@ VALUES --1
 , 'ID'
 , 83277,
 , 2
-, 'Hoover')
+, 'Hoover'); /*
 , --5
 ( 'Rodney'
 , 'NMN'
@@ -532,7 +532,7 @@ VALUES
 , 'ID'
 , 83712);
 
-
+/*
 INSERT INTO student_staff_relations
 ( student_id
 , staff_id)
@@ -590,3 +590,4 @@ VALUES
 (22, 15),
 (23, 15),
 (24, 16);
+*/
