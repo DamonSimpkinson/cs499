@@ -118,7 +118,7 @@ VALUES
 , '742 Evergreen Terrace'
 , 'Springfield'
 , 'ID'
-, 83277,
+, 83277
 , 2
 , 'Hoover')
 ,
