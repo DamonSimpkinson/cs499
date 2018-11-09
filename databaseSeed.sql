@@ -88,7 +88,7 @@ VALUES --1
 , 'ID'
 , 83712
 , 3
-, 'Largo');/*
+, 'Largo')
 ,
 ( 'Jane'
 , 'NMN'
@@ -155,7 +155,7 @@ VALUES --1
 , 'ID'
 , 83227
 , 4
-, 'Krabapple')
+, 'Krabapple'); /*
 ,
 ( 'Milhouse'
 , 'Mussolini'
