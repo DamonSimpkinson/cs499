@@ -37,7 +37,7 @@ CREATE TABLE parents
 , address_street        VARCHAR(30)   NOT NULL
 , address_city          VARCHAR(20)   NOT NULL
 , address_state         VARCHAR(2)    NOT NULL
-, address_zip           INTEGER(5)    NOT NULL);
+, address_zip           INTEGER       NOT NULL);
 
 
 DROP TABLE IF EXISTS student_staff_relations CASCADE;
@@ -57,9 +57,9 @@ CREATE TABLE student_parent_relations
 DROP TABLE IF EXISTS incidents CASCADE;
 CREATE TABLE incidents
 ( incident_id           SERIAL        PRIMARY KEY
-, date_day              INTEGER(2)    NOT NULL
-, date_month            INTEGER(2)    NOT NULL
-, date_year             INTEGER(2)    NOT NULL
+, date_day              INTEGER       NOT NULL
+, date_month            INTEGER       NOT NULL
+, date_year             INTEGER       NOT NULL
 , student_initiating    INTEGER       REFERENCES student(student_id)
 , staff_reporting       INTEGER       REFERENCES staff(staff_id)
 , location              VARCHAR(20)   NOT NULL
