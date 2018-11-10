@@ -51,3 +51,150 @@ puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
   [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "PBISMonitor_development" ENCODING = 'unicode'[0m
   ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "PBISMonitor_development" ENCODING = 'unicode'[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (619.4ms)[0m  [1m[35mCREATE DATABASE "PBISMonitor_development" ENCODING = 'unicode'[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (433.4ms)[0m  [1m[35mCREATE DATABASE "PBISMonitor_test" ENCODING = 'unicode'[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3937679916835119105)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateParents (20181110175855)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (17.9ms)[0m  [1m[35mCREATE TABLE "parents" ("id" bigserial primary key, "fName" character varying, "lName" character varying, "mName" character varying, "grade" integer, "email" character varying, "phone" integer, "homeroom_teacher" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181110175855_create_parents.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181110175855"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-10 22:21:15.896675"], ["updated_at", "2018-11-10 22:21:15.896675"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3937679916835119105)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-11-10 15:25:40 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 3669ms (Views: 3643.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/parents" for 127.0.0.1 at 2018-11-10 15:25:50 -0700
+Processing by ParentsController#index as HTML
+  Rendering parents/index.html.erb within layouts/application
+  [1m[36mParent Load (1.0ms)[0m  [1m[34mSELECT "parents".* FROM "parents"[0m
+  ↳ app/views/parents/index.html.erb:11
+  Rendered parents/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 63ms (Views: 50.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-10 15:25:53 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 90ms (Views: 87.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/parents/new" for 127.0.0.1 at 2018-11-10 15:25:54 -0700
+Processing by ParentsController#new as HTML
+  Rendering parents/new.html.erb within layouts/application
+  Rendered parents/_form.html.erb (38.7ms)
+  Rendered parents/new.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 114ms (Views: 81.8ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/parents" for 127.0.0.1 at 2018-11-10 15:27:53 -0700
+Processing by ParentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WqLah2sA49k6oZiyYZppDqvo7/Z5JBH3ocY6hvJJBBVmAuxqIwtdK4DT3pM4ql/DTIZrept9g9qkx6VTHhPIrw==", "parent"=>{"fName"=>"Macey", "lName"=>"Rye"}, "commit"=>"Create Parent"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parents_controller.rb:22
+  [1m[36mParent Create (1.2ms)[0m  [1m[32mINSERT INTO "parents" ("fName", "lName", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fName", "Macey"], ["lName", "Rye"], ["created_at", "2018-11-10 22:27:53.380863"], ["updated_at", "2018-11-10 22:27:53.380863"]]
+  ↳ app/controllers/parents_controller.rb:22
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/parents_controller.rb:22
+Redirected to http://localhost:3000/parents/1
+Completed 302 Found in 10ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/parents/1" for 127.0.0.1 at 2018-11-10 15:27:53 -0700
+Processing by ParentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParent Load (0.4ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parents_controller.rb:8
+  Rendering parents/show.html.erb within layouts/application
+  Rendered parents/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 49ms (Views: 39.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parents/1/edit" for 127.0.0.1 at 2018-11-10 15:27:57 -0700
+Processing by ParentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParent Load (0.6ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parents_controller.rb:16
+  Rendering parents/edit.html.erb within layouts/application
+  Rendered parents/_form.html.erb (6.1ms)
+  Rendered parents/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 74ms (Views: 69.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/parents/1" for 127.0.0.1 at 2018-11-10 15:28:03 -0700
+Processing by ParentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+q0p5DxmIiUFVx8W+cNraND0LWvTSz0YDmjj14SCTGhaEVe3AH/LVw+WzlHfkQ2URGcmvVnrkMwI6Ux8nVakdQ==", "parent"=>{"fName"=>"Pacey", "lName"=>"Rye"}, "commit"=>"Update Parent", "id"=>"1"}
+  [1m[36mParent Load (0.5ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parents_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parents_controller.rb:35
+  [1m[36mParent Update (0.6ms)[0m  [1m[33mUPDATE "parents" SET "fName" = $1, "updated_at" = $2 WHERE "parents"."id" = $3[0m  [["fName", "Pacey"], ["updated_at", "2018-11-10 22:28:03.104503"], ["id", 1]]
+  ↳ app/controllers/parents_controller.rb:35
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/parents_controller.rb:35
+Redirected to http://localhost:3000/parents/1
+Completed 302 Found in 14ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/parents/1" for 127.0.0.1 at 2018-11-10 15:28:03 -0700
+Processing by ParentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParent Load (0.4ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parents_controller.rb:8
+  Rendering parents/show.html.erb within layouts/application
+  Rendered parents/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parents" for 127.0.0.1 at 2018-11-10 15:28:05 -0700
+Processing by ParentsController#index as HTML
+  Rendering parents/index.html.erb within layouts/application
+  [1m[36mParent Load (0.5ms)[0m  [1m[34mSELECT "parents".* FROM "parents"[0m
+  ↳ app/views/parents/index.html.erb:11
+  Rendered parents/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 66ms (Views: 62.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parents/1/edit" for 127.0.0.1 at 2018-11-10 15:28:08 -0700
+Processing by ParentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParent Load (0.5ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parents_controller.rb:16
+  Rendering parents/edit.html.erb within layouts/application
+  Rendered parents/_form.html.erb (4.8ms)
+  Rendered parents/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 89ms (Views: 84.7ms | ActiveRecord: 0.5ms)
+
+
