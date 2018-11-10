@@ -198,3 +198,435 @@ Processing by ParentsController#edit as HTML
 Completed 200 OK in 89ms (Views: 84.7ms | ActiveRecord: 0.5ms)
 
 
+Started PATCH "/parents/1" for 127.0.0.1 at 2018-11-10 15:33:43 -0700
+Processing by ParentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v8P2A9yrPGVIx80xKGaa2+7Fv6QVDFgeFuoa8eFY5a8ff4hQ4LLVF0IGHHYONPwnela0cp+s9coQa7Va+IwNsg==", "parent"=>{"fName"=>"Macey", "lName"=>"Rye"}, "commit"=>"Update Parent", "id"=>"1"}
+  [1m[36mParent Load (1.2ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parents_controller.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parents_controller.rb:35
+  [1m[36mParent Update (0.7ms)[0m  [1m[33mUPDATE "parents" SET "fName" = $1, "updated_at" = $2 WHERE "parents"."id" = $3[0m  [["fName", "Macey"], ["updated_at", "2018-11-10 22:33:43.070136"], ["id", 1]]
+  ↳ app/controllers/parents_controller.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/parents_controller.rb:35
+Redirected to http://localhost:3000/parents/1
+Completed 302 Found in 10ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/parents/1" for 127.0.0.1 at 2018-11-10 15:33:43 -0700
+Processing by ParentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParent Load (0.4ms)[0m  [1m[34mSELECT  "parents".* FROM "parents" WHERE "parents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parents_controller.rb:8
+  Rendering parents/show.html.erb within layouts/application
+  Rendered parents/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parents" for 127.0.0.1 at 2018-11-10 15:33:45 -0700
+Processing by ParentsController#index as HTML
+  Rendering parents/index.html.erb within layouts/application
+  [1m[36mParent Load (3.3ms)[0m  [1m[34mSELECT "parents".* FROM "parents"[0m
+  ↳ app/views/parents/index.html.erb:11
+  Rendered parents/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 49ms (Views: 43.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-10 15:33:46 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-10 16:04:02 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 115ms (Views: 113.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-10 16:04:16 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-11-10 16:04:18 -0700
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant StudentsController::Student):
+  
+app/controllers/students_controller.rb:4:in `index'
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-10 16:04:37 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2018-11-10 16:04:39 -0700
+Processing by StudentsController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant StudentsController::Student):
+  
+app/controllers/students_controller.rb:12:in `new'
+Started GET "/students/new" for 127.0.0.1 at 2018-11-10 16:05:43 -0700
+Processing by StudentsController#new as HTML
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant StudentsController::Student):
+  
+app/controllers/students_controller.rb:12:in `new'
+Started GET "/students/new" for 127.0.0.1 at 2018-11-10 16:09:26 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3937679916835119105)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateStudents (20181110230908)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "fName" character varying, "lName" character varying, "mName" character varying, "grade" integer, "email" character varying, "phone" integer, "homeroom_teacher" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181110230908_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181110230908"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3937679916835119105)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/students/new" for 127.0.0.1 at 2018-11-10 16:09:53 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (4.2ms)
+  Rendered students/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 86ms (Views: 45.9ms | ActiveRecord: 13.4ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2018-11-10 16:10:04 -0700
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zkpDroq1/YE9Gt9lk5De0DdQqXNjX2Vv/9EDf4qr03v3BY2r/hbX6L83jAMw+k0ieaWeiBj+JlAW6tlItxnG8w==", "student"=>{"fName"=>"Sally", "lName"=>"McEwen"}, "commit"=>"Create Student"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/students_controller.rb:22
+  [1m[36mStudent Create (1.4ms)[0m  [1m[32mINSERT INTO "students" ("fName", "lName", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fName", "Sally"], ["lName", "McEwen"], ["created_at", "2018-11-10 23:10:04.611876"], ["updated_at", "2018-11-10 23:10:04.611876"]]
+  ↳ app/controllers/students_controller.rb:22
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/students_controller.rb:22
+Redirected to http://localhost:3000/students/1
+Completed 302 Found in 13ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2018-11-10 16:10:04 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 46ms (Views: 40.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students/1/edit" for 127.0.0.1 at 2018-11-10 16:10:07 -0700
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (1.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:16
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/_form.html.erb (4.4ms)
+  Rendered students/edit.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 58ms (Views: 53.3ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/students/1" for 127.0.0.1 at 2018-11-10 16:10:16 -0700
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pai7DPtVg1VoDCkPmatkhOgR92QAbnl8bEXwK0bhAgK4q+mG0Z6zX+7WEtzcA+RtJS/22QXhzCXmaK3xbk7ufw==", "student"=>{"fName"=>"Sally", "lName"=>"McDew"}, "commit"=>"Update Student", "id"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/students_controller.rb:35
+  [1m[36mStudent Update (1.3ms)[0m  [1m[33mUPDATE "students" SET "lName" = $1, "updated_at" = $2 WHERE "students"."id" = $3[0m  [["lName", "McDew"], ["updated_at", "2018-11-10 23:10:16.359746"], ["id", 1]]
+  ↳ app/controllers/students_controller.rb:35
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/students_controller.rb:35
+Redirected to http://localhost:3000/students/1
+Completed 302 Found in 15ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2018-11-10 16:10:16 -0700
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 61ms (Views: 56.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-11-10 16:10:20 -0700
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:11
+  Rendered students/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3937679916835119105)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateStaffs (20181110231314)
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "staffs" ("id" bigserial primary key, "fName" character varying, "lName" character varying, "mName" character varying, "role" character varying, "gradeTaught" integer, "email" character varying, "phone" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181110231314_create_staffs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181110231314"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3937679916835119105)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-10 16:25:07 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"staffs"}):
+     6: <%= link_to 'Students', controller: 'students' %><br>
+     7: <%= link_to 'Add students', new_student_path %><br>
+     8: <br>
+     9: <%= link_to 'Staff Members', controller: 'staffs' %><br>
+    10: <%= link_to 'Add staff', new_staff_path %><br>
+  
+app/views/welcome/index.html.erb:9:in `_app_views_welcome_index_html_erb___618952708221949615_70017342382720'
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-10 16:27:08 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"staffs"}):
+     6: <%= link_to 'Students', controller: 'students' %><br>
+     7: <%= link_to 'Add students', new_student_path %><br>
+     8: <br>
+     9: <%= link_to 'Staff Members', controller: 'staffs' %><br>
+    10: <%= link_to 'Add staff', new_staff_path %><br>
+  
+app/views/welcome/index.html.erb:9:in `_app_views_welcome_index_html_erb___618952708221949615_70017333685160'
+Started PUT "/__web_console/repl_sessions/5ad9f4bb2591b15f3ec9c3e2cdce5996" for 127.0.0.1 at 2018-11-10 16:27:18 -0700
+Started PUT "/__web_console/repl_sessions/5ad9f4bb2591b15f3ec9c3e2cdce5996" for 127.0.0.1 at 2018-11-10 16:27:20 -0700
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-10 16:29:23 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"staff"}):
+     6: <%= link_to 'Students', controller: 'students' %><br>
+     7: <%= link_to 'Add students', new_student_path %><br>
+     8: <br>
+     9: <%= link_to 'Staff Members', controller: 'staff' %><br>
+    10: <%= link_to 'Add staff', new_staff_path %><br>
+  
+app/views/welcome/index.html.erb:9:in `_app_views_welcome_index_html_erb___618952708221949615_70017342764700'
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-10 16:30:26 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"staffs"}):
+     6: <%= link_to 'Students', controller: 'students' %><br>
+     7: <%= link_to 'Add students', new_student_path %><br>
+     8: <br>
+     9: <%= link_to 'Staff Members', controller: 'staffs' %><br>
+    10: <%= link_to 'Add staff', new_staff_path %><br>
+  
+app/views/welcome/index.html.erb:9:in `_app_views_welcome_index_html_erb___618952708221949615_47190434738780'
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-10 16:32:12 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 136ms (Views: 134.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staffs" for 127.0.0.1 at 2018-11-10 16:32:15 -0700
+Processing by StaffsController#index as HTML
+  Rendering staffs/index.html.erb within layouts/application
+  [1m[36mStaff Load (1.4ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs"[0m
+  ↳ app/views/staffs/index.html.erb:11
+  Rendered staffs/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 70ms (Views: 50.3ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-10 16:32:20 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staffs/new" for 127.0.0.1 at 2018-11-10 16:32:22 -0700
+Processing by StaffsController#new as HTML
+  Rendering staffs/new.html.erb within layouts/application
+  Rendered staffs/_form.html.erb (4.2ms)
+  Rendered staffs/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 88ms (Views: 52.8ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/staffs" for 127.0.0.1 at 2018-11-10 16:32:28 -0700
+Processing by StaffsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S6PqlHtrnMI5jGOtRHx1wJHFhj1+ztNY21B+BjlmjIU03dVoQCTpDZzlrAP8T6KEi5fwI6GYJM4GuJky5HmWiw==", "staff"=>{"fName"=>"Casey", "lName"=>"Pye"}, "commit"=>"Create Staff"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/staffs_controller.rb:22
+  [1m[36mStaff Create (1.2ms)[0m  [1m[32mINSERT INTO "staffs" ("fName", "lName", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fName", "Casey"], ["lName", "Pye"], ["created_at", "2018-11-10 23:32:28.383575"], ["updated_at", "2018-11-10 23:32:28.383575"]]
+  ↳ app/controllers/staffs_controller.rb:22
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/staffs_controller.rb:22
+Redirected to http://localhost:3000/staffs/1
+Completed 302 Found in 10ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2018-11-10 16:32:28 -0700
+Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.4ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/staffs_controller.rb:8
+  Rendering staffs/show.html.erb within layouts/application
+  Rendered staffs/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 60ms (Views: 54.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/staffs/1/edit" for 127.0.0.1 at 2018-11-10 16:32:31 -0700
+Processing by StaffsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/staffs_controller.rb:16
+  Rendering staffs/edit.html.erb within layouts/application
+  Rendered staffs/_form.html.erb (4.2ms)
+  Rendered staffs/edit.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 73ms (Views: 69.1ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/staffs/1" for 127.0.0.1 at 2018-11-10 16:32:37 -0700
+Processing by StaffsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tw7ftdYds9x0XpKINnZyPFqwFt3tNq463NJhMQnq7O87lZc/fKq6w1bYEP9V43NU5TPJoBlqatWZ4koNYYL7zg==", "staff"=>{"fName"=>"Masey", "lName"=>"Rye"}, "commit"=>"Update Staff", "id"=>"1"}
+  [1m[36mStaff Load (1.5ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/staffs_controller.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/staffs_controller.rb:35
+  [1m[36mStaff Update (0.6ms)[0m  [1m[33mUPDATE "staffs" SET "fName" = $1, "lName" = $2, "updated_at" = $3 WHERE "staffs"."id" = $4[0m  [["fName", "Masey"], ["lName", "Rye"], ["updated_at", "2018-11-10 23:32:37.399598"], ["id", 1]]
+  ↳ app/controllers/staffs_controller.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/staffs_controller.rb:35
+Redirected to http://localhost:3000/staffs/1
+Completed 302 Found in 11ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/staffs/1" for 127.0.0.1 at 2018-11-10 16:32:37 -0700
+Processing by StaffsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/staffs_controller.rb:8
+  Rendering staffs/show.html.erb within layouts/application
+  Rendered staffs/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 48ms (Views: 44.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/staffs" for 127.0.0.1 at 2018-11-10 16:32:41 -0700
+Processing by StaffsController#index as HTML
+  Rendering staffs/index.html.erb within layouts/application
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs"[0m
+  ↳ app/views/staffs/index.html.erb:11
+  Rendered staffs/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-10 16:32:42 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 68ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
