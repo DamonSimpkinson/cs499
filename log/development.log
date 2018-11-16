@@ -630,3 +630,29 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 68ms (Views: 65.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/staffs/new" for 127.0.0.1 at 2018-11-10 16:38:41 -0700
+Processing by StaffsController#new as HTML
+  Rendering staffs/new.html.erb within layouts/application
+  Rendered staffs/_form.html.erb (4.1ms)
+  Rendered staffs/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staffs" for 127.0.0.1 at 2018-11-10 16:38:43 -0700
+Processing by StaffsController#index as HTML
+  Rendering staffs/index.html.erb within layouts/application
+  [1m[36mStaff Load (1.3ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs"[0m
+  ↳ app/views/staffs/index.html.erb:11
+  Rendered staffs/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 81ms (Views: 77.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 20:25:57 -0700
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 719ms (Views: 690.1ms | ActiveRecord: 0.0ms)
+
+
