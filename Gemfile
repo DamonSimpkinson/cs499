@@ -64,3 +64,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Gems for bootstap
 gem 'bootstrap'
 gem 'jquery-rails'
+
+# Gem for simple form
+gem 'simple_form'

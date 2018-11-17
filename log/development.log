@@ -782,3 +782,2301 @@ Processing by StudentsController#index as HTML
 Completed 200 OK in 138ms (Views: 106.5ms | ActiveRecord: 24.5ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3937679916835119105)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBehaviors (20181116182643)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3937679916835119105)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3937679916835119105)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBehaviors (20181116182643)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (61.2ms)[0m  [1m[35mCREATE TABLE "behaviors" ("id" bigserial primary key, "student_id" integer, "event_date" date, "event_time" time, "grade" integer, "staff_id" integer, "location" character varying, "minor_behavior" character varying, "major_behavior" character varying, "motivation" character varying, "admin_action" character varying, "time_in_office" boolean, "loss_privilege" boolean, "conference_with_student" boolean, "parent_contact" boolean, "time_out_detention" boolean, "restitution_community_service" boolean, "individualized_instruction" boolean, "counselor" boolean, "in_school_suspension" boolean, "out_school_suspension" boolean, "expulsion" boolean, "involved_none" boolean, "involved_peers" boolean, "involved_staff" boolean, "involved_teacher" boolean, "involved_substitute" boolean, "peers_involved" character varying, "staff_involved" character varying, "teachers_involved" character varying, "subsitutes_involved" character varying, "antecedent" character varying, "behavior_description" character varying, "due_process" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181116182643_create_behaviors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181116182643"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (8.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3937679916835119105)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-11-16 11:31:09 -0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 275ms (Views: 272.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-16 11:31:42 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 67ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-16 11:31:45 -0700
+  
+ActionController::RoutingError (uninitialized constant BehaviorsController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:56:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-16 15:18:10 -0700
+  
+ActionController::RoutingError (uninitialized constant BehaviorsController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:56:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-16 15:26:58 -0700
+  
+ActionController::RoutingError (uninitialized constant BehaviorsController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:56:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=behavior" for 127.0.0.1 at 2018-11-16 15:27:42 -0700
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"behavior"}
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-16 15:28:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/behaviors"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-16 15:34:12 -0700
+  
+ActionController::RoutingError (uninitialized constant BehaviorsController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:56:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3937679916835119105)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3937679916835119105)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-16 15:39:08 -0700
+  
+ActionController::RoutingError (uninitialized constant BehaviorsController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:56:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-16 15:41:51 -0700
+  
+LoadError (Unable to autoload constant BehaviorsController, expected /home/casey/monitor/app/controllers/behaviors_controller.rb to define it):
+  
+activesupport (5.2.1) lib/active_support/dependencies.rb:507:in `load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.1) lib/active_support/dependencies.rb:578:in `get'
+activesupport (5.2.1) lib/active_support/dependencies.rb:609:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-16 15:44:44 -0700
+Processing by BehaviorsController#index as HTML
+Completed 406 Not Acceptable in 55ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (BehaviorsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-16 15:46:57 -0700
+Processing by BehaviorsController#index as HTML
+Completed 406 Not Acceptable in 56ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (BehaviorsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-16 15:47:01 -0700
+Processing by BehaviorsController#index as HTML
+Completed 406 Not Acceptable in 56ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (BehaviorsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-16 15:47:34 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 72ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 15:47:42 -0700
+Processing by BehaviorsController#new as HTML
+Completed 406 Not Acceptable in 139ms (ActiveRecord: 14.3ms)
+
+
+  
+ActionController::UnknownFormat (BehaviorsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 15:49:26 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (34.4ms)
+  Rendered behaviors/new.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 91ms (Views: 89.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-16 15:49:31 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  Rendered behaviors/index.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <th></th>
+     9:   </tr>
+    10:  
+    11:   <% @behaviors.each do |behavior| %>
+    12:     <tr>
+    13:       <td><%= behavior.student_id %></td>
+    14:       <td><%= behavior.event_date %></td>
+  
+app/views/behaviors/index.html.erb:11:in `_app_views_behaviors_index_html_erb__3471207298673326081_70058612901860'
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-16 15:50:32 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  Rendered behaviors/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 107ms (Views: 105.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-16 15:50:34 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 60ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 15:54:55 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (5.8ms)
+  Rendered behaviors/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 67ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 16:01:30 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (6.2ms)
+  Rendered behaviors/new.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    16:  
+    17:  <p>
+    18:     <%= form.label :"Select student:" %><br>
+    19:     <%=  select_tag 'student', options_from_collection_for_select(@student, 'id', 'fName', 'lName')%>
+    20:  </p>
+    21:   <p>
+    22:     <%= form.label :"First Name" %><br>
+  
+app/views/behaviors/_form.html.erb:19:in `block in _app_views_behaviors__form_html_erb___1829225483494459840_70058610949980'
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058610949980'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058611119220'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 16:03:03 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (7.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    16:  
+    17:  <p>
+    18:     <%= form.label :"Select student:" %><br>
+    19:     <%=  select_tag 'student', options_from_collection_for_select(@students, 'id', 'fName', 'lName')%>
+    20:  </p>
+    21:   <p>
+    22:     <%= form.label :"First Name" %><br>
+  
+app/views/behaviors/_form.html.erb:19:in `block in _app_views_behaviors__form_html_erb___1829225483494459840_70058667873440'
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058667873440'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058620121000'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 16:15:49 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (64.2ms)
+  Rendered behaviors/new.html.erb within layouts/application (66.3ms)
+Completed 200 OK in 138ms (Views: 122.4ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 16:19:42 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (8.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :lName:Symbol):
+    16:  
+    17:  <p>
+    18:     <%= form.label :"Select Student:" %><br>
+    19:     <%=  form.collection_select :student_id, Student.order(:id), :id, :fName, :lName,  include_blank: true%>
+    20:  </p>
+    21:   <p>
+    22:     <%= form.label :"First Name" %><br>
+  
+app/views/behaviors/_form.html.erb:19:in `block in _app_views_behaviors__form_html_erb___1829225483494459840_70058613547140'
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058613547140'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058613761940'
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-16 16:20:04 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 73ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-16 16:21:04 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 16:21:09 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (8.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (12.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `+' for :fName:Symbol):
+    16:  
+    17:  <p>
+    18:     <%= form.label :"Select Student:" %><br>
+    19:     <%=  form.collection_select :student_id, Student.order(:id), :id, :fName + :lName,   include_blank: true%>
+    20:  </p>
+    21:   <p>
+    22:     <%= form.label :"First Name" %><br>
+  
+app/views/behaviors/_form.html.erb:19:in `block in _app_views_behaviors__form_html_erb___1829225483494459840_70058772318240'
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058772318240'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058772309520'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 16:22:49 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (6.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `+' for :fName:Symbol):
+    16:  
+    17:  <p>
+    18:     <%= form.label :"Select Student:" %><br>
+    19:     <%=  form.collection_select :student_id, Student.order(:id), :id, :fName + " asdf",   include_blank: true%>
+    20:  </p>
+    21:   <p>
+    22:     <%= form.label :"First Name" %><br>
+  
+app/views/behaviors/_form.html.erb:19:in `block in _app_views_behaviors__form_html_erb___1829225483494459840_70058618020960'
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058618020960'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058618016140'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 16:27:33 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (82.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (85.0ms)
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 23.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_name' for #<Student:0x00007f6fa880ab28>):
+    16:  
+    17:  <p>
+    18:     <%= form.label :"Select Student:" %><br>
+    19:     <%=  form.collection_select :student_id, Student.order(:id), :id, :full_name,   include_blank: true%>
+    20:  </p>
+    21:   <p>
+    22:     <%= form.label :"First Name" %><br>
+  
+app/views/behaviors/_form.html.erb:19:in `block in _app_views_behaviors__form_html_erb___1829225483494459840_70058772713060'
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058772713060'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058772730220'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 16:27:37 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (48.2ms)
+  Rendered behaviors/new.html.erb within layouts/application (50.5ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_name' for #<Student:0x00007f6f96675040>):
+    16:  
+    17:  <p>
+    18:     <%= form.label :"Select Student:" %><br>
+    19:     <%=  form.collection_select :student_id, Student.order(:id), :id, :full_name,   include_blank: true%>
+    20:  </p>
+    21:   <p>
+    22:     <%= form.label :"First Name" %><br>
+  
+app/views/behaviors/_form.html.erb:19:in `block in _app_views_behaviors__form_html_erb___1829225483494459840_70058620746980'
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058620746980'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058620760980'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 16:28:49 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (82.3ms)
+  Rendered behaviors/new.html.erb within layouts/application (84.5ms)
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 19.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_name' for #<Student:0x00007f6f9543a7b8>):
+    16:  
+    17:  <p>
+    18:     <%= form.label :"Select Student:" %><br>
+    19:     <%=  form.collection_select :student_id, Student.order(:id), :id, :full_name,   include_blank: true%>
+    20:  </p>
+    21:   <p>
+    22:     <%= form.label :"First Name" %><br>
+  
+app/views/behaviors/_form.html.erb:19:in `block in _app_views_behaviors__form_html_erb___1829225483494459840_70058612331180'
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058612331180'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058612516180'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 16:29:38 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (38.3ms)
+  Rendered behaviors/new.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 190ms (Views: 90.1ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 16:30:02 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."id" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (40.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 201ms (Views: 86.3ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 16:31:17 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.9ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (32.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 180ms (Views: 87.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:19:36 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (989.2ms)
+  Rendered behaviors/new.html.erb within layouts/application (991.5ms)
+Completed 500 Internal Server Error in 1095ms (ActiveRecord: 22.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `options' for #<#<Class:0x00007f6fa8be3c68>:0x00007f6fa8be1e68>
+Did you mean?  url_options):
+    20:  </p>
+    21:  <p>
+    22:     <%= form.label :"Loss of priviledge?" %>
+    23:     <%= check_box :behavior, :loss_privilege,options,on_value,off_value%>
+    24:  </p>
+    25: 
+    26:   <p>
+  
+app/views/behaviors/_form.html.erb:23:in `block in _app_views_behaviors__form_html_erb___1829225483494459840_70058774525300'
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058774525300'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058774577840'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:20:45 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (997.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (1001.3ms)
+Completed 500 Internal Server Error in 1008ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `options' for #<#<Class:0x00007f6fa8be3c68>:0x00007f6fa8e4b438>
+Did you mean?  url_options):
+    20:  </p>
+    21:  <p>
+    22:     <%= form.label :"Loss of priviledge?" %>
+    23:     <%= check_box :behavior, :loss_privilege,options,'1','0'%>
+    24:  </p>
+    25: 
+    26:   <p>
+  
+app/views/behaviors/_form.html.erb:23:in `block in _app_views_behaviors__form_html_erb___1829225483494459840_70058775584800'
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058775584800'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058775830340'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:26:36 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (2.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (939.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (942.0ms)
+Completed 500 Internal Server Error in 951ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `options' for #<#<Class:0x00007f6fa8be3c68>:0x00007f6fa8c8c0c0>
+Did you mean?  url_options):
+    20:  </p>
+    21:  <p>
+    22:     <%= form.label :"Loss of priviledge?" %>
+    23:     <%= form.check_box :behavior, :loss_privilege,options,'1','0'%>
+    24:  </p>
+    25: 
+    26:   <p>
+  
+app/views/behaviors/_form.html.erb:23:in `block in _app_views_behaviors__form_html_erb___1829225483494459840_70058774881940'
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058774881940'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058774914700'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:27:59 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (9.2ms)
+  Rendered behaviors/new.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..3)):
+    20:  </p>
+    21:  <p>
+    22:     <%= form.label :"Loss of privilege?" %>
+    23:     <%= form.radio_button :loss_privilege%>
+    24:  </p>
+    25: 
+    26:   <p>
+  
+app/views/behaviors/_form.html.erb:23:in `block in _app_views_behaviors__form_html_erb___1829225483494459840_70058703513480'
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058703513480'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058703396340'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:31:31 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (7.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..3)):
+    20:  </p>
+    21:  <p>
+    22:     <%= form.label :"Loss of privilege?" %>
+    23:     <%= form.radio_button :loss_privilege%> 1
+    24:  </p>
+    25: 
+    26:   <p>
+  
+app/views/behaviors/_form.html.erb:23:in `block in _app_views_behaviors__form_html_erb___1829225483494459840_70058619190780'
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058619190780'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058619205260'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:32:01 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (321.8ms)
+  Rendered behaviors/new.html.erb within layouts/application (324.2ms)
+Completed 200 OK in 382ms (Views: 379.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:32:51 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (2.9ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (37.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 103ms (Views: 97.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:33:59 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (8.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 66ms (Views: 62.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:37:01 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (7.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:40:15 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.9ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:19
+  Rendered behaviors/_form.html.erb (12.3ms)
+  Rendered behaviors/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 72ms (Views: 68.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:47:01 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (552.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (558.3ms)
+Completed 500 Internal Server Error in 564ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `simple_form_for' for #<#<Class:0x00007f6fa8be3c68>:0x00007f6fa8a4e290>
+Did you mean?  simple_format):
+    1: <%= simple_form_for(@behavior)do |f|%>
+    2:  
+    3:  
+    4:  
+  
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058773690380'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058773739120'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:47:33 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (668.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (671.6ms)
+Completed 500 Internal Server Error in 691ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `simple_form_for' for #<#<Class:0x00007f6fa8be3c68>:0x00007f6f98055e38>
+Did you mean?  simple_format):
+    1: <%= simple_form_for(@behavior) do |form|%>
+    2:  
+    3:  
+    4:  
+  
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058701397640'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058634294520'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:48:21 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (507.3ms)
+  Rendered behaviors/new.html.erb within layouts/application (509.4ms)
+Completed 500 Internal Server Error in 517ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `simple_form_for' for #<#<Class:0x00007f6fa8be3c68>:0x00007f6fa04a1890>
+Did you mean?  simple_format):
+    1: <%= simple_form_for(@behavior) do |form|%>
+    2:  
+    3:  
+    4:  
+  
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058703206960'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058703655140'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:49:21 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (607.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (609.9ms)
+Completed 500 Internal Server Error in 619ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `simple_form_for' for #<#<Class:0x00007f6fa8be3c68>:0x00007f6fa87e3550>
+Did you mean?  simple_format):
+    1: <%= simple_form_for @behavior do |form| %>
+    2:  
+    3:  
+    4:  
+  
+app/views/behaviors/_form.html.erb:1:in `_app_views_behaviors__form_html_erb___1829225483494459840_70058772514960'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___4070690457590053650_70058772471600'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:50:31 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/casey/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (80.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (83.6ms)
+Completed 200 OK in 875ms (Views: 756.1ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:52:56 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (35.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 158ms (Views: 155.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:53:10 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (11.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 111ms (Views: 108.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors" for 127.0.0.1 at 2018-11-16 17:53:13 -0700
+Processing by BehaviorsController#index as HTML
+  Rendering behaviors/index.html.erb within layouts/application
+  Rendered behaviors/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 78ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-11-16 17:53:16 -0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 64ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:53:19 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (26.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 87ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:54:28 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (9.8ms)
+  Rendered behaviors/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:54:47 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (8.3ms)
+  Rendered behaviors/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 80ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:55:59 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (11.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 17:57:11 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (11.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 84ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:29:46 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.3ms)
+  Rendered behaviors/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:39:24 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (2.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 79ms (Views: 75.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:42:29 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.3ms)
+  Rendered behaviors/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 110ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:42:32 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:44:57 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (13.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 67ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:46:54 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 60ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:48:20 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:48:34 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:48:59 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:49:19 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 76ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:50:37 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 71ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:51:21 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:52:24 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:52:26 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.4ms)
+  Rendered behaviors/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 75ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:52:31 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 84ms (Views: 80.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:52:45 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 108ms (Views: 104.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 19:54:44 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.4ms)
+  Rendered behaviors/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:05:06 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (14.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 80ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:06:59 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:07:15 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (3.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 65ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:07:37 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:08:20 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:08:38 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.8ms)
+  Rendered behaviors/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:11:04 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 67ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:12:41 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (2.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 59ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:15:01 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (1.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:16:38 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (7.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (73.4ms)
+  Rendered behaviors/new.html.erb within layouts/application (75.5ms)
+Completed 200 OK in 130ms (Views: 105.7ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:24:44 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (515.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (517.2ms)
+Completed 500 Internal Server Error in 523ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `select_date' for #<ActionView::Helpers::FormBuilder:0x00007f2e2a124c60>
+Did you mean?  select):
+    31:         <%=  form.collection_select :student_id, Student.order(:lName), :id, :full_name_last,   include_blank: true%>
+    32:        </p>
+    33:       <%= form.label :"Select Student:" %><br>
+    34:       <%= form.select_date Date.today, prefix: :start_date %>
+    35:     </div>
+    36:     
+    37:     <div class="well well-sm col-sm-6">
+  
+app/views/behaviors/_form.html.erb:34:in `block in _app_views_behaviors__form_html_erb___2028152023072354588_69918125546240'
+app/views/behaviors/_form.html.erb:7:in `_app_views_behaviors__form_html_erb___2028152023072354588_69918125546240'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___614972051595790048_69918125602720'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:25:44 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (16.3ms)
+  Rendered behaviors/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 85ms (Views: 82.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:26:20 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (3.2ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (12.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 85ms (Views: 79.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:27:04 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (11.4ms)
+  Rendered behaviors/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 70ms (Views: 65.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:28:42 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (34.2ms)
+  Rendered behaviors/new.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 114ms (Views: 111.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:29:20 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (9.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 85ms (Views: 82.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:31:38 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (10.8ms)
+  Rendered behaviors/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 93ms (Views: 90.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:33:05 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (10.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 125ms (Views: 122.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:34:36 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (971.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (973.5ms)
+Completed 500 Internal Server Error in 980ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `my_time' for #<#<Class:0x00007f2e28cff938>:0x00007f2e20336170>):
+    37:       <p>
+    38:         <%= form.label :"Time: " %>
+    39:         <%= time_field(:behavior, :event_time) %>
+    40:         <% select_time(my_time, time_separator: ':') %>
+    41:       </p>
+    42:     </div>
+    43:     
+  
+app/views/behaviors/_form.html.erb:40:in `block in _app_views_behaviors__form_html_erb___2028152023072354588_69918042716760'
+app/views/behaviors/_form.html.erb:7:in `_app_views_behaviors__form_html_erb___2028152023072354588_69918042716760'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___614972051595790048_69918042731840'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:35:04 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (13.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (15.6ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `min' for :event_time:Symbol):
+    37:       <p>
+    38:         <%= form.label :"Time: " %>
+    39:         <%= time_field(:behavior, :event_time) %>
+    40:         <% select_time(:event_time, time_separator: ':') %>
+    41:       </p>
+    42:     </div>
+    43:     
+  
+app/views/behaviors/_form.html.erb:40:in `block in _app_views_behaviors__form_html_erb___2028152023072354588_69918121379780'
+app/views/behaviors/_form.html.erb:7:in `_app_views_behaviors__form_html_erb___2028152023072354588_69918121379780'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___614972051595790048_69918121481660'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:35:49 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.1ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (13.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 95ms (Views: 92.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:37:27 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (13.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 100ms (Views: 97.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:38:09 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.9ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (14.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 83ms (Views: 78.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:38:50 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.9ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (12.4ms)
+  Rendered behaviors/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 82ms (Views: 77.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:40:24 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (15.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 91ms (Views: 87.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:40:30 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (10.4ms)
+  Rendered behaviors/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 76ms (Views: 73.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:42:07 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  Rendered behaviors/_form.html.erb (14.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 75ms (Views: 72.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:44:42 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (7.8ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (88.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (90.4ms)
+Completed 200 OK in 238ms (Views: 119.9ms | ActiveRecord: 36.1ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:47:15 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (130.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (132.5ms)
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `staff_member_info' for #<Staff:0x00007f2e2a5fbd10>
+Did you mean?  staff_member):
+    44:       </p>
+    45:       <p>
+    46:         <%= form.label :"Reffering staff: " %>
+    47:         <%=  form.collection_select :staff_id, Staff.order(:lName), :id, :staff_member_info,   include_blank: true%>
+    48:        </p>
+    49:     </div>
+    50:     
+  
+app/views/behaviors/_form.html.erb:47:in `block in _app_views_behaviors__form_html_erb___2028152023072354588_69918129718500'
+app/views/behaviors/_form.html.erb:7:in `_app_views_behaviors__form_html_erb___2028152023072354588_69918129718500'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___614972051595790048_69918129735940'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:47:32 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (90.8ms)
+  Rendered behaviors/new.html.erb within layouts/application (93.1ms)
+Completed 200 OK in 249ms (Views: 141.7ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:48:07 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (1.4ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (18.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 74ms (Views: 69.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:51:31 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (15.8ms)
+  Rendered behaviors/new.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 73ms (Views: 69.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:52:08 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.9ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (15.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 83ms (Views: 78.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:52:33 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (15.6ms)
+  Rendered behaviors/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 71ms (Views: 67.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:56:16 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (3.4ms)
+  Rendered behaviors/new.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/casey/monitor/app/views/behaviors/_form.html.erb:96: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+          ^~~
+/home/casey/monitor/app/views/behaviors/_form.html.erb:98: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/casey/monitor/app/views/behaviors/_form.html.erb:100: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/behaviors/_form.html.erb:96: syntax error, unexpected keyword_end, expecting ')'
+app/views/behaviors/_form.html.erb:98: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/behaviors/_form.html.erb:100: syntax error, unexpected keyword_end, expecting ')'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___614972051595790048_69918122151720'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:56:41 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (3.3ms)
+  Rendered behaviors/new.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/casey/monitor/app/views/behaviors/_form.html.erb:96: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+          ^~~
+/home/casey/monitor/app/views/behaviors/_form.html.erb:98: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/casey/monitor/app/views/behaviors/_form.html.erb:100: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/behaviors/_form.html.erb:96: syntax error, unexpected keyword_end, expecting ')'
+app/views/behaviors/_form.html.erb:98: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/behaviors/_form.html.erb:100: syntax error, unexpected keyword_end, expecting ')'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___614972051595790048_69918009236920'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:56:46 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (3.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/casey/monitor/app/views/behaviors/_form.html.erb:95: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+          ^~~
+/home/casey/monitor/app/views/behaviors/_form.html.erb:97: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/casey/monitor/app/views/behaviors/_form.html.erb:99: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/behaviors/_form.html.erb:95: syntax error, unexpected keyword_end, expecting ')'
+app/views/behaviors/_form.html.erb:97: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/behaviors/_form.html.erb:99: syntax error, unexpected keyword_end, expecting ')'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___614972051595790048_69918143348680'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:57:18 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (3.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/casey/monitor/app/views/behaviors/_form.html.erb:94: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+          ^~~
+/home/casey/monitor/app/views/behaviors/_form.html.erb:96: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/casey/monitor/app/views/behaviors/_form.html.erb:98: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/behaviors/_form.html.erb:94: syntax error, unexpected keyword_end, expecting ')'
+app/views/behaviors/_form.html.erb:96: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/behaviors/_form.html.erb:98: syntax error, unexpected keyword_end, expecting ')'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___614972051595790048_69918125034080'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:58:05 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  Rendered behaviors/_form.html.erb (3.2ms)
+  Rendered behaviors/new.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/casey/monitor/app/views/behaviors/_form.html.erb:94: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+          ^~~
+/home/casey/monitor/app/views/behaviors/_form.html.erb:96: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/casey/monitor/app/views/behaviors/_form.html.erb:98: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/behaviors/_form.html.erb:94: syntax error, unexpected keyword_end, expecting ')'
+app/views/behaviors/_form.html.erb:96: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/behaviors/_form.html.erb:98: syntax error, unexpected keyword_end, expecting ')'
+app/views/behaviors/new.html.erb:3:in `_app_views_behaviors_new_html_erb___614972051595790048_69918143127040'
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 20:59:12 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (16.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 91ms (Views: 86.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:00:17 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (1.0ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (17.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 74ms (Views: 69.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:00:38 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.8ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (18.8ms)
+  Rendered behaviors/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 73ms (Views: 68.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:01:19 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.7ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (20.8ms)
+  Rendered behaviors/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 82ms (Views: 77.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:01:42 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (22.2ms)
+  Rendered behaviors/new.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 83ms (Views: 79.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:06:57 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.9ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (24.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 81ms (Views: 75.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:07:55 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (1.0ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (23.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 81ms (Views: 75.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:08:53 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (22.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 115ms (Views: 111.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:09:11 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.7ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (20.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 77ms (Views: 73.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:09:56 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (21.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 87ms (Views: 83.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:10:04 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.8ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (23.9ms)
+  Rendered behaviors/new.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 84ms (Views: 80.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:11:02 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (36.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 101ms (Views: 97.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:17:38 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.7ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (24.8ms)
+  Rendered behaviors/new.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 95ms (Views: 90.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:20:40 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.9ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (49.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 110ms (Views: 104.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:23:14 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (28.0ms)
+  Rendered behaviors/new.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 111ms (Views: 107.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:25:36 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.8ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (28.7ms)
+  Rendered behaviors/new.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 93ms (Views: 88.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:28:52 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (27.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 92ms (Views: 88.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:31:00 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (27.5ms)
+  Rendered behaviors/new.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 93ms (Views: 90.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:33:06 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.9ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (33.4ms)
+  Rendered behaviors/new.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 105ms (Views: 99.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:35:07 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.9ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (34.1ms)
+  Rendered behaviors/new.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 91ms (Views: 86.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:35:52 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.8ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (31.2ms)
+  Rendered behaviors/new.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 95ms (Views: 91.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/behaviors/new" for 127.0.0.1 at 2018-11-16 21:36:13 -0700
+Processing by BehaviorsController#new as HTML
+  Rendering behaviors/new.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY "students"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:31
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" ORDER BY "staffs"."lName" ASC[0m
+  ↳ app/views/behaviors/_form.html.erb:47
+  Rendered behaviors/_form.html.erb (30.2ms)
+  Rendered behaviors/new.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 120ms (Views: 116.2ms | ActiveRecord: 1.0ms)
+
+
